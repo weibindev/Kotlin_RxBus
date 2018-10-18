@@ -55,6 +55,9 @@ object RxBus {
         }
     }
 
+    /**
+     * internal修饰符 只有在相同模块中才能使用
+     */
     internal fun register(disposable: Any, composite: Disposable) {
         var compositeDisposable = disposablesMap[disposable]
         if (compositeDisposable == null) {
